@@ -27,12 +27,21 @@ public static void main(String[] args)
 	CountryNameMap.put("sri lanka",15206);
 	CountryNameMap.put("south korea",15916);
 	CountryNameMap.put("norway",15233);
+	System.out.println("Country size is"+CountryNameMap.size());
+	
 	Set<String> keys=CountryNameMap.keySet();
 	keys.forEach(r->System.out.println(r));
+	
 	Collection<Integer> values=CountryNameMap.values();
     values.forEach(e->System.out.println(e));
 
 	Set<Entry<String,Integer>> entryset1=CountryNameMap.entrySet();
+	entryset1.forEach(country->System.out.println(country));
+	
+	System.out.println("");
+	CountryNameMap.forEach((key,value)->System.out.println(key+""+value));
+	
+	
 	for (Entry<String, Integer> entry : entryset1) {
 		
 		String key=entry.getKey();

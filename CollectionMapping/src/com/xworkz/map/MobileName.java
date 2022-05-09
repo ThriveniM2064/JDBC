@@ -26,12 +26,20 @@ public static void main(String[] args)
 		MobileNameMap.put("intex","manya");
 		MobileNameMap.put("panasonic","brunda");
 		MobileNameMap.put("gionee","nammu");
+		System.out.println("mobile name map"+MobileNameMap.size());
+		
 		Set<String> keys=MobileNameMap.keySet();
 		keys.forEach(r->System.out.println(r));
+		
 		Collection<String> values=MobileNameMap.values();
 	    values.forEach(e->System.out.println(e));
 
 		Set<Entry<String,String>> entryset1=MobileNameMap.entrySet();
+		entryset1.forEach(mobile->System.out.println(mobile));
+		
+		System.out.println("");
+		MobileNameMap.forEach((key,value)->System.out.println(key+""+value));
+		
 		for (Entry<String, String> entry : entryset1) {
 			
 			String key=entry.getKey();

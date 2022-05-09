@@ -26,12 +26,20 @@ public class CEO{
 		CEONameMap.put("srihang","Robert");
 		CEONameMap.put("sprint","Dan Hasse");
 		CEONameMap.put("Accenture","Pierre nanterme");
+		System.out.println("ceo names map"+CEONameMap.size());
+		
 		Set<String> keys=CEONameMap.keySet();
 		keys.forEach(r->System.out.println(r));
+		
 		Collection<String> values=CEONameMap.values();
 	    values.forEach(e->System.out.println(e));
 
 		Set<Entry<String,String>> entryset1=CEONameMap.entrySet();
+		entryset1.forEach(ceo->System.out.println(ceo));
+		
+		System.out.println("");
+		CEONameMap.forEach((key,value)->System.out.println(key+""+value));
+		
 		for (Entry<String, String> entry : entryset1) {
 			
 			String key=entry.getKey();
